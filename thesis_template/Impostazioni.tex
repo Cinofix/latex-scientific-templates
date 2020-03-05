@@ -1,0 +1,155 @@
+\documentclass[12pt,a4paper,twoside,english]{report}
+
+%\usepackage[a4paper,bindingoffset=0.2in,%
+%top=0.9in,bottom=0.8in,%
+%footskip=.35in]{geometry}
+
+
+\usepackage[a4paper,top=0.9in,bottom=0.8in,
+footskip=.35in]{geometry}
+
+\usepackage{url,amsfonts,epsfig}
+\usepackage{afterpage}
+\usepackage{amsmath,amssymb}
+\usepackage{rotating}
+\usepackage[scriptsize]{caption2}
+\usepackage{tikz} % for background logo in frontespizio
+\usepackage{placeins}
+\hyphenation{a-gen-tiz-za-zio-ne}
+\setlength{\paperwidth}{22. cm} % old 21
+\setlength{\paperheight}{29.7 cm}
+\setlength{\oddsidemargin} {2. cm}
+\setlength{\evensidemargin} {2. cm}
+\addtolength{\oddsidemargin} {-0.4 cm}
+\addtolength{\evensidemargin} {-0.4 cm}
+\usepackage[english]{babel}
+%\usepackage[latin1]{inputenc}
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+\hypersetup{hidelinks=true}
+\usepackage{listings}
+\usepackage{algpseudocode,algorithm,algorithmicx}
+
+\newcommand*\Let[2]{\State #1 $\gets$ #2}
+\algrenewcommand\algorithmicrequire{\textbf{Input Data:}}
+\algrenewcommand\algorithmicensure{\textbf{Output:}}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
+\DeclarePairedDelimiter{\floor}{\lfloor}{\rfloor}
+\usepackage{booktabs}
+
+\usepackage[numbers]{natbib}
+
+\usepackage{graphicx}
+\usepackage{comment}
+\usepackage{fancyhdr}
+\usepackage{framed}
+\usepackage{lastpage}
+\usepackage{enumitem}
+\usepackage{mdwlist}
+\usepackage{placeins}
+\usepackage{float}
+\usepackage{courier}
+\usepackage{tikz}
+
+\usepackage{tikz}
+%\renewcommand{\captionfont}{\normalfont \sffamily \itshape \small}
+\renewcommand{\captionfont}{\normalfont \scriptsize}
+
+\renewcommand{\contentsname}{Indice}
+\newcommand{\hrefoot}[1]{\footnote{\href{#1}{#1}}}
+\newcommand{\footprofile}[2]{\footnote{\href{#1}{#2}}}
+
+
+
+%\def\qed{\ \ \vrule height6pt width5pt depth3pt}
+\def\qed{\ \vrule height5pt width5pt depth0pt}
+ 
+\newcommand{\pf}{{\sc Proof} }
+\newcommand{\ep}{{\mbox{ }\nolinebreak{$\rule{2mm}{2mm}$}}}
+\newcommand{\op}{\diamondsuit}
+\newcommand{\cL}{{\cal L}}
+\newcommand{\cN}{{\cal N}}
+\newcommand{\cF}{{\cal F}}  
+\newcommand{\QL}{Q_n [ {\cal L} ]}
+\newcommand{\cNL}{{\cal N} [{\cal L} ]}
+\newcommand{\diam}{{\rm diam}}
+\newcommand{\pfo}{{\sc Proof} (outline) }
+\newcommand{\OR}{\mbox{{\sc or}}}
+%\newcommand{\TH}{\mbox{{\sc Th}}}
+\newcommand{\iffe}{{\bf if}}
+\newcommand{\then}{{\bf then}}
+\newcommand{\els}{{\bf else}}
+\newcommand{\beg}{{\bf begin}}
+\newcommand{\e}{{\bf end}}   
+\newcommand{\while}{{\bf while}}
+\newcommand{\du}{{\bf do}}
+\newcommand{\for}{{\bf for}}
+\newcommand{\tu}{{\bf to}}   
+\newcommand{\var}{{\bf var}} 
+\newcommand{\of}{{\bf of}}   
+\newcommand{\con}{{\bf with}}
+
+\newcommand{\infig}[3]{\begin{figure*}[t]
+\centerline{\epsfbox{#1}}
+\caption{\label{#2} #3} \end{figure*}}
+
+
+\newcommand{\image}[3]{ % 1 image 2 caption 3 size
+	\begin{figure}[h!]
+	  \centering
+	  \includegraphics[width=#3\textwidth]{#1} 
+	  \caption{#2}
+	\end{figure}
+	\FloatBarrier
+}
+
+\newcommand{\imageb}[2]{ % 1 image 2 size
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=#2\textwidth]{#1} 
+	\end{figure}
+	\FloatBarrier
+}
+
+\newcommand{\imageLabel}[4]{ % 1 image 2 caption 3 size
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=#3\textwidth]{#1} 
+		\caption{#2}
+		\label{fig:#4}
+	\end{figure}
+	\FloatBarrier
+}
+\newcommand{\Z}{\mathbb{Z}}
+
+%Theorem definitions
+\theoremstyle{plain}
+\newtheorem{thm}{Theorem}[section] % reset theorem numbering for each chapter
+\theoremstyle{definition}
+\newtheorem{defn}[thm]{Definition} % definition numbers are dependent on theorem numbers
+\newtheorem{exmp}[thm]{Example} % same for example numbers
+
+\newcommand{\chaptercontent}{
+	\section{Basics}
+	\begin{defn}Here is a new definition.\end{defn}
+	\begin{thm}Here is a new theorem.\end{thm}
+	\begin{thm}Here is a new theorem.\end{thm}
+	\begin{exmp}Here is a good example.\end{exmp}
+	\subsection{Some tips}
+	\begin{defn}Here is a new definition.\end{defn}
+	\section{Advanced stuff}
+	\begin{defn}Here is a new definition.\end{defn}
+	\subsection{Warnings}
+	\begin{defn}Here is a new definition.\end{defn}
+}
+
+
+\setlength\parindent{0pt} % No indent
+
+
+\renewcommand{\vec}{\mathbf}

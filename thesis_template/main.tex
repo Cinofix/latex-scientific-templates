@@ -1,0 +1,57 @@
+
+\input{Impostazioni}
+\input{Copertina}
+
+\begin{document}
+\input{Copertina}
+	\maketitle
+	\pagenumbering{roman}
+	\pagestyle{plain}
+	
+	\chapter*{Acknowledgments}
+	First and foremost, I would like to thank my advisor, Prof. Marcello Pelillo, for having spent much time helping me during the development of my thesis, recommending papers which have been both useful and inspirational for expanding this work. His lessons have made him a great advisor and have taught me priceless notions on how to do research. Together with Alessandro Torcinovich, one of his Ph.D students, I feel we formed an excellent group in which we developed multiple curious and useful ideas both related to this work and also to future projects, which I will address during my Ph.D career. \\
+	I would also like to thank my friends for all the contributions that supported me while I was working on this challenging project. \\
+	Last but not least, I want to thank my parents, who have allowed me to pursue the best education I could ever have gotten and have given me the possibility to stay here in Venice during my academic career. \\
+	Parents and friends comforted me with much patience, encouragement and also kind smiles which I will never forget.
+
+	\chapter*{Abstract}
+	Machine learning is becoming more and more used by businesses and private users as an additional tool for aiding in decision making and automation processes.
+	However, over the past few years, there has been an increased interest in research related to the security or robustness of learning models in presence of adversarial examples. It has been discovered that wisely crafted adversarial perturbations, unaffecting human judgment, can significantly affect the performance of the learning models. Adversarial machine learning studies how learning algorithms can be fooled by crafted adversarial examples. In many ways it is a recent research area, mainly focused on the analysis of supervised models, and only few works have been done in unsupervised settings. The adversarial analysis of this learning paradigm has become imperative as in recent years unsupervised learning has been increasingly adopted in multiple security and data analysis applications.
+	In this thesis, we are going to show how an attacker can craft poisoning perturbations on the input data for reaching target goals. In particular, we are going to analyze the robustness of two fundamental applications of unsupervised learning, feature-based data clustering and image segmentation. We are going to show how an attacker can craft poisoning perturbations against the two applications. We choose three very well known clustering algorithms (K-Means, Spectral and Dominant Sets clustering) and multiple datasets for analyzing the robustness provided by them against adversarial examples, crafted with our designed algorithms.
+	
+	%In this thesis we are going to see how two fundamental application of the unsupervised learning field can be fooled, in particular feature-based data clustering and image segmentation.
+	
+	%In this thesis, we are going to show how an attacker can craft poisoning perturbations on the input data for reaching target goals.
+	
+	\paragraph{Keywords} 
+	Adversarial Machine Learning, Unsupervised Learning, Clustering Algorithms, Machine Learning, Security, Robustness.
+	
+	\tableofcontents
+	
+	\clearpage
+	\pagenumbering{arabic}
+	\setcounter{page}{1}
+	%\listoffigures
+	%\pagestyle{empty}\cleardoublepage
+	
+	\include{introduction}
+	
+	
+	\include{UnsupervisedLearning}
+
+	%\include{crafting_advExamples} ask to the author
+	%\include{results}
+	\include{conclusions}
+
+
+%K-Means again result to be more robust then then the others, but this is probably related to the fact the we are using similarities based on the distances. It could be reasonable in the future to expand this analysis introducing other similarity measures.
+
+	
+	
+	\bibliographystyle{plainnat}
+	{\footnotesize
+		\bibliography{bibliography}
+	}
+	
+	
+\end{document}
